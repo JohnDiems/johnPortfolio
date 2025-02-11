@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="mx-auto max-w-full py-2 sm:max-w-5xl sm:px-6 lg:px-8">
+                <nav class="sticky top-0 relative p-4 bg-white z-[20] sm:z-[20]">
+                    <div>
+                        <!-- Hamburger Button -->
+                        <button id="menu-toggle" class="md:hidden p-2 focus:outline-none" aria-label="Toggle menu">
+                            <div class="w-6 h-5 flex flex-col justify-between">
+                                <span id="line1" class="w-full h-0.5 bg-gray-800 transition-all duration-300"></span>
+                                <span id="line2"
+                                    class="w-full h-0.5 bg-gray-800 transition-opacity duration-300"></span>
+                                <span id="line3" class="w-full h-0.5 bg-gray-800 transition-all duration-300"></span>
+                            </div>
+                        </button>
+
+                        <!-- Navigation Menu -->
+                        <div id="menu"
+                            class="hidden md:block absolute md:relative w-full bg-white md:bg-transparent top-full left-0 md:shadow-none sticky top-0 z-50">
+                            <div class="flex flex-col md:flex-row items-center justify-center gap-4 p-4 md:p-0">
+                                <a href="#about"
+                                    class="transition-colors duration-200 hover:text-[#4EDFF9] sm:cursor-pointer text-center text-gray-600 px-3 py-1">About</a>
+                                <a href="#services"
+                                    class="transition-colors duration-200 hover:text-[#4EDFF9] sm:cursor-pointer text-center text-gray-600 px-3 py-1">Services</a>
+                                <a href="#contact"
+                                    class="transition-colors duration-200 hover:text-[#4EDFF9] sm:cursor-pointer text-center text-gray-600 px-3 py-1">Contact</a>
+                                <a href="#home"
+                                    class="transition-colors duration-200 hover:text-[#4EDFF9] sm:cursor-pointer border-1 border-[#4EDFF9] bg-[#4EDFF9] text-white hover:text-gray-600 rounded-full px-5 py-1 text-center">Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div>
+                    <div class=" flex flex-col items-center text-center sm:items-start mt-8 sm:mt-20 h-screen px-4">
+                        <!-- <Drawer :isOpen="state.open" :isClose="closeDrawer" /> -->
+                        <div class="flex flex-col items-center justify-center">
+                            <div class="hidden md:block">
+                                <img src="assets/images/test3.png" class="w-[160px]  animate-blink" alt="logo">
+                            </div>
+                            <h1 class=" text-center font-bold text-7xl mt-4 "> Hi, I'm <span
+                                    class="text-[#4EDFF9]">John</span>
+                            </h1>
+                            <p class="text-center tracking-[10px] text-5xl">Frontend Developer</p>
+                            <p class="text-center tracking-tight text-base mt-2 text-gray-600">
+                                My focus is on frontend development, using the latest tools and frameworks to ensure
+                                smooth public-facing services. I also have knowledge of backend development and APIs,
+                            </p>
+                            <div class="py-3 flex justify-center gap-4 sm:gap-20 flex-wrap">
+                                <img src="assets/images/js.png" class="w-7 h-7" alt="js logo">
+                                <img src="assets/images/bootstrap.png" class="w-7 h-7 p-1" alt="bootstrap logo">
+                                <img src="assets/images/nuxt.png" class="w-7 h-7" alt="nuxt logo">
+                                <img src="assets/images/laravel.png" class="w-7 h-7 p-1" alt="laravel logo">
+                                <img src="assets/images/tailwindcss.png" class="w-7 h-7 p-1" alt="tailwindcss logo">
+                            </div>
+                            <div>
+                                <button type="button" @click="openDrawer"
+                                    class="animate-bounce mt-10 border-1 cursor-pointer text-white  hover:text-gray-800 bg-[#4EDFF9] border-[#4EDFF9] px-4 py-2 rounded-full font-medium">AVAILABLE
+                                    TO WORK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" flex flex-col items-center text-center sm:items-start mt-8 sm:mt-5 h-screen">
+                    <div>
+                        <div class="flex justify-between items-center gap-x-5">
+                            <div class="w-full bg-gray-900 h-[1px]"></div>
+                            <h1 class="text-4xl font-medium text-[#4EDFF9] space-x-5">ABOUT ME</h1>
+                            <div class="w-full bg-gray-900 h-[1px]"></div>
+                        </div>
+                        <div class="flex justify-between flex-col sm:flex-row mt-20 shadow-md">
+                            <div class="flex justify-center md:justify-center w-full h-full">
+                                <img src="assets/images/picture.png"
+                                    class="flex items-center sm:items-center animate-blink h-50">
+                            </div>
+                            <div class="py-5 px-4">
+                                <p class="text-start text-base text-gray-600 ">Hi, I'm John Frel Diems, a recent IT
+                                    graduate
+                                    from Davao
+                                    City,
+                                    Philippines,
+                                    class of 2023-2024. I
+                                    developed an interest in programming during senior high school. After graduating
+                                    from college, I
+                                    started working as a web developer for the Government of Davao City.
+                                </p>
+                                <p class="text-start text-base mt-4 text-gray-600">
+                                    My focus is on frontend development, using the latest tools and frameworks to ensure
+                                    smooth
+                                    public-facing services. I also have knowledge of backend development and APIs, which
+                                    I gained
+                                    through collaboration with my teammates. We use APIs to separate our tasks and
+                                    ensure our code
+                                    is clean and maintainable.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center text-center sm:items-start mt-[120%] sm:mt-5 h-screen">
+                    <div>
+                        <div class="flex justify-center items-center gap-x-5">
+                            <div class="w-full bg-gray-900 h-[1px]"></div>
+                            <h1 class="text-4xl font-medium text-[#4EDFF9] ">WORK EXPERIENCE</h1>
+                            <div class="w-full bg-gray-900 h-[1px]"></div>
+                        </div>
+                        <div>
+                            <div class="relative flex flex-col items-start mt-20 ">
+
+                                <div class="absolute left-[6px] top-[16%] w-[2px] h-[90%] sm:h-90 bg-gray-900 z-1">
+                                </div>
+
+                                <div class="flex items-center space-x-3 mt-10 z-10">
+                                    <div class="w-4 h-4 rounded-full bg-[#4EDFF9]"></div>
+                                    <div class="flex flex-col sm:flex-row justify-between w-full">
+                                        <div class="flex flex-col space-y-2 sm:space-y-0 sm:space-x-30">
+                                            <p class="text-xl sm:text-2xl text-start font-medium text-gray-900">Frontend
+                                                Developer
+                                            </p>
+                                            <p class="font-medium text-sm text-start text-gray-900">City Government of
+                                                Davao</p>
+                                            <p class="text-start text-sm text-gray-900">1 year</p>
+                                        </div>
+                                        <div class="flex-1 mt-4 sm:mt-0 sm:ml-[130px]">
+                                            <p class="text-start text-gray-600 text-base shadow-md px-5 py-5">I have
+                                                been
+                                                working
+                                                in a
+                                                government
+                                                office in Davao
+                                                City for almost a year. We use various platforms and frameworks to
+                                                optimize web
+                                                applications, ensuring a smooth user experience for the public.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-3 mt-10 z-10">
+                                    <div class="w-4 h-4 rounded-full bg-[#4EDFF9]"></div>
+                                    <div class="flex flex-col sm:flex-row justify-between w-full">
+                                        <div class="flex flex-col space-y-2 sm:space-y-0 sm:space-x-30">
+                                            <p class="text-xl sm:text-2xl text-start font-medium text-gray-900">
+                                                On-the-Job Training (OJT)
+                                            </p>
+                                            <p class="font-medium text-sm text-start text-gray-900">City Government of
+                                                Davao</p>
+                                            <p class="text-start text-sm text-gray-900">3 months</p>
+                                        </div>
+                                        <div class="flex-1 mt-4 sm:mt-0 sm:ml-[60px]">
+                                            <p class="text-start text-gray-600 text-base shadow-md px-5 py-5">I
+                                                completed my
+                                                internship at a government
+                                                office in
+                                                Davao City for almost 3 months, where I worked
+                                                as a frontend developer. We worked on simple projects
+                                                to accomplish tasks assigned by our school in order to
+                                                complete our internship requirements.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" flex flex-col items-center text-center sm:items-start mt-[120%] sm:mt-10 h-screen px-4">
+                    <div>
+                        <div class="flex justify-center items-center gap-x-5">
+                            <div class="w-full bg-gray-900 h-[1px]"></div>
+                            <h1 class="text-4xl font-medium text-[#4EDFF9] ">PROJECTS</h1>
+                            <div class="w-full bg-gray-900 h-[1px]"></div>
+                        </div>
+                        <div
+                            class=" shadow-md px-5 py-3 flex flex-col sm:flex-row justify-between items-center w-full mt-20 sm:space-x-45 space-y-5 sm:space-y-0">
+                            <div class="w-60 bg-gray-900 h-40">
+                                <img src="assets/images/rfid.png" class="h-full" alt="">
+                            </div>
+                            <div class="flex-1 sm:ml-[150px]">
+                                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
+                                    <div
+                                        class="cursor-pointer border-red-500 text-red-500 border border-1 rounded-full px-3 py-1 flex items-center justify-center text-sm">
+                                        <img src="assets/images/laravel.png" class="mr-2 w-4 h-4" alt="alts">
+                                        Laravel 8
+                                    </div>
+                                    <div
+                                        class="cursor-pointer border-yellow-500 text-yellow-500 border border-1 rounded-full px-3 py-1 flex items-center justify-center text-sm">
+                                        <img src="assets/images/js.png" class="mr-2 w-5 h-5" alt="alts">
+                                        JavaScript
+                                    </div>
+                                    <div
+                                        class="cursor-pointer border-indigo-800 text-indigo-800 border border-1 rounded-full px-3 py-1 flex items-center justify-center text-sm">
+                                        <img src="assets/images/bootstrap.png" class="mr-2 w-5 h-5" alt="alts">
+                                        Bootstrap
+                                    </div>
+                                </div>
+                                <h1
+                                    class="font-medium py-1 text-xl text-center sm:text-start sm:text-2xl text-gray-900">
+                                    Entrix:
+                                    RFID-based Entry and
+                                    Exit
+                                    System</h1>
+                                <p class="text-start text-gray-600 text-base">
+                                    In our capstone project, we created an RFID-based student
+                                    attendance system that sends SMS alerts to parents when
+                                    their child is marked present. It includes student accounts
+                                    for attendance tracking and features like dynamic
+                                    attendance for school events.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="shadow-md px-5 py-3 flex flex-col sm:flex-row justify-between items-center w-full mt-20 sm:space-x-45 space-y-5 sm:space-y-0">
+                            <div class="w-60 bg-gray-900 h-40">
+                                <img src="assets/images/hmislogo.png" class="h-full" alt="">
+                            </div>
+                            <div class="flex-1 sm:ml-[150px]">
+                                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
+                                    <div
+                                        class="cursor-pointer border-sky-500 text-sky-600 border border-1 rounded-full px-3 py-1 flex items-center justify-center text-sm">
+                                        <img src="assets/images/tailwindcss.png" class="mr-2 w-4 h-4" alt="alts">
+                                        Tailwind
+                                    </div>
+                                    <div
+                                        class="cursor-pointer border-red-500 text-red-500 border border-1 rounded-full px-3 py-1 flex items-center justify-center text-sm">
+                                        <img src="assets/images/laravel.png" class="mr-2 w-5 h-5" alt="alts">
+                                        Laravel 11
+                                    </div>
+                                    <div
+                                        class="cursor-pointer  border-green-500 text-green-500 border border-1 rounded-full px-3 py-1 flex items-center justify-center text-sm">
+                                        <img src="assets/images/nuxt.png" class="mr-2 w-5 h-5" alt="alts">
+                                        Nuxt js
+                                    </div>
+                                </div>
+                                <h1
+                                    class="font-medium py-1 text-xl text-center sm:text-start sm:text-2xl text-gray-900">
+                                    HMIS -
+                                    Housing
+                                    Management
+                                    Information System</h1>
+                                <p class="text-start text-gray-600 text-base">
+                                    This housing system, linked to the City Registration System,
+                                    simplifies access to socialized and economic housing
+                                    programs for individuals and communities across all
+                                    barangays. It generates census data and evaluations
+                                    to match applicants with the best housing solutions
+                                    from government or private providers.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div
+                            class="shadow-md px-5 py-3 flex flex-col sm:flex-row justify-between items-center w-full mt-20 sm:space-x-45 space-y-5 sm:space-y-0">
+                            <div class="w-60 bg-gray-900 h-40">
+                            </div>
+                            <div class="flex-1 sm:ml-5">
+                                <div class="flex flex-col sm:flex-row  space-y-3 sm:space-y-0 sm:space-x-3">
+                                    <div
+                                        class="cursor-pointer border-red-500 text-red-500 border border-1 rounded-full px-3 py-1 flex items-center justify-center text-sm ">
+                                        <img src="assets/images/laravel.png" class="mr-2 w-4 h-4" alt="alts">
+                                        Laravel 8
+                                    </div>
+                                    <div
+                                        class="cursor-pointer border-yellow-500 text-yellow-500 border border-1 rounded-full px-3 py-1 flex items-center justify-center text-sm">
+                                        <img src="assets/images/js.png" class="mr-2 w-5 h-5" alt="alts">
+                                        JavaScript
+                                    </div>
+                                </div>
+                                <h1
+                                    class="font-medium text-xl text-center sm:text-start sm:text-2xl py-1 text-gray-900 ">
+                                    Queueing -
+                                    School project</h1>
+                                <p class="text-start text-gray-600 text-base">
+                                    In our capstone project, we developed an RFID system
+                                    for tracking student attendance. The system sends an
+                                    SMS notification to parents whenever their child is
+                                    marked as present. We also created student accounts,
+                                    allowing them to track their attendance. Additionally,
+                                    we integrated features like the ability to add school
+                                    events with dynamic attendance tracking.
+                                </p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle menu function
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menu.classList.toggle('hidden');
+            menu.classList.toggle('block', !isOpen);
+
+            // Hamburger animation
+            line1.classList.toggle('rotate-45');
+            line1.classList.toggle('translate-y-2');
+            line2.classList.toggle('opacity-0');
+            line3.classList.toggle('-rotate-45');
+            line3.classList.toggle('-translate-y-2');
+        });
+
+        // Smooth scroll function
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
