@@ -15,3 +15,46 @@
 .animate-blink {
     animation: blink 4s infinite;
 }
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee {
+    overflow: hidden;
+    display: flex;
+    margin: 2rem 0;
+    mask-image: linear-gradient(to right,
+            transparent 0,
+            black 128px,
+            black calc(100% - 128px),
+            transparent 100%);
+}
+
+.marquee-content {
+    animation: scroll-left 40s linear infinite;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.marquee-content li {
+    margin: 0 2rem;
+    display: inline-block;
+}
+
+.marquee-content img {
+    height: 28px;
+    width: auto;
+    max-width: none;
+}
