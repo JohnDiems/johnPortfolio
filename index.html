@@ -67,6 +67,7 @@
             <div>
                 <img src="assets/images/test3.png" class="w-[100px] sm:w-[160px] animate-blink" alt="logo">
             </div>
+
             <h1 class=" text-4xl font-semibold tracking-tight text-gray-900 sm:text-7xl font-mono"> Hi, I'm <span
                     class="text-[#4EDFF9]">John</span>
             </h1>
@@ -163,7 +164,6 @@
                 <h3 class="text-xl font-semibold text-gray-900"> On-the-Job Training (OJT)</h3>
                 <p class="text-gray-600">City Government of Davao</p>
                 <p class="text-gray-600 text-sm">4 months</p>
-
             </div>
 
             <div class="md:w-2/3">
@@ -188,17 +188,72 @@
             <div class="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-6 lg:px-8 xl:grid-cols-2">
                 <ul role="list" class="divide-y divide-gray-200 xl:col-span-3">
                     <li class="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row">
-                        <img src="assets/images/hmislogo.png" alt=""
-                            class="aspect-6/6 w-[25rem] flex-none rounded-2xl object-cover outline-1 -outline-offset-1 outline-black/5" />
+                        <div type="button" id="openModal"
+                            class="group relative aspect-6/6 sm:w-[20rem] w-20rem flex-none cursor-pointer transition duration-500 hover:scale-110">
+                            <img src="assets/images/hmislogo.png" alt="housing management information system"
+                                class="w-full h-full object-cover  rounded-2xl outline-1 -outline-offset-1 outline-black/5" />
+                            <div
+                                class="absolute inset-0 flex flex-col justify-end bg-black/60 p-6 opacity-0 rounded-2xl group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="text-white text-xl font-semibold">View more</h3>
+                                <p class="text-white text-sm">Housing management information system.</p>
+                            </div>
+                        </div>
+                        <div id="modal" class="modal">
+                            <div class="modal-content">
+                                <span id="closeModal" class="close">&times;</span>
+                                <div class="md:px-6 lg:px-12">
+                                    <div class="overflow-x-hidden -mx-4 md:mx-0">
+                                        <div class="container m-auto py-8 overflow-x-auto">
+                                            <div class="w-full max-h grid grid-cols-12 gap-4 auto-rows-fr">
+                                                <!-- Large Image (Left Side) -->
+                                                <div
+                                                    class="col-span-12 md:col-span-8 lg:col-span-12 p-2 flex items-center justify-center">
+                                                    <img src="assets/images/hmis/login.png" alt="large image"
+                                                        class="max-h-[80vh] w-full rounded-2xl object-contain">
+                                                </div>
+
+                                                <!-- Small Images (Right Side) -->
+                                                <div
+                                                    class="col-span-12 md:col-span-8 lg:col-span-12 p-2 flex items-center justify-center">
+                                                    <img src="assets/images/hmis/applicant_login.png"
+                                                        alt="small image 1"
+                                                        class="max-h-[80vh] w-full rounded-2xl object-contain">
+                                                </div>
+
+                                                <div
+                                                    class="col-span-12 md:col-span-8 lg:col-span-12 p-2 flex items-center justify-center">
+                                                    <img src="assets/images/hmis/applicants.png" alt="small image 2"
+                                                        class="max-h-[80vh] w-full rounded-2xl object-contain">
+                                                </div>
+
+                                                <div
+                                                    class="col-span-12 md:col-span-8 lg:col-span-12 p-2 flex items-center justify-center">
+                                                    <img src="assets/images/hmis/applicants_Schedule.png"
+                                                        alt="small image 3"
+                                                        class="max-h-[80vh] w-full rounded-2xl object-contain">
+                                                </div>
+
+                                                <div
+                                                    class="col-span-12 md:col-span-8 lg:col-span-12 p-2 flex items-center justify-center">
+                                                    <img src="assets/images/hmis/account.png" alt="small image 4"
+                                                        class="max-h-[80vh] w-full rounded-2xl object-contain">
+                                                </div>
+
+                                                <div
+                                                    class="col-span-12 md:col-span-8 lg:col-span-12 p-2 flex items-center justify-center">
+                                                    <img src="assets/images/hmis/applicants_form.png"
+                                                        alt="small image 4"
+                                                        class="max-h-[80vh] w-full rounded-2xl object-contain">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="max-w-xl flex-auto">
                             <h3 class="text-lg/8 font-semibold tracking-tight text-gray-900"> HMIS - Housing Management
                                 Information System</h3>
-                            <a href="#" class="text-gray-400 hover:text-gray-500">
-                                <span class="sr-only">Github</span>
-                                <a href="#" class="text-gray-500 hover:text-gray-400">
-                                    Click Repository
-                                </a>
-                            </a>
                             <a href="#" class="text-gray-400 hover:text-gray-500">
                                 <span class="sr-only">Github</span>
                                 <a href="#" class="text-gray-500 hover:text-gray-400">
@@ -242,8 +297,16 @@
                         </div>
                     </li>
                     <li class="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row">
-                        <img src="assets/images/sports.png" alt=""
-                            class="aspect-6/6 w-[25rem] flex-none rounded-2xl object-cover outline-1 -outline-offset-1 outline-black/5" />
+                        <div
+                            class="group relative aspect-6/6 sm:w-[20rem] w-20rem flex-none cursor-pointer transition duration-500 hover:scale-110">
+                            <img src="assets/images/sports.png" alt="Davao City Athletes and Sports Information System"
+                                class="w-full h-full object-cover  rounded-2xl outline-1 -outline-offset-1 outline-black/5" />
+                            <div
+                                class="absolute inset-0 flex flex-col justify-end bg-black/60 p-6 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300">
+                                <h3 class="text-white text-xl font-semibold">View more</h3>
+                                <p class="text-white text-sm">Davao City Athletes and Sports Information System</p>
+                            </div>
+                        </div>
                         <div class="max-w-xl flex-auto">
                             <h3 class="text-lg/8 font-semibold tracking-tight text-gray-900">DCASIS - Davao City
                                 Athletes and Sports Information System</h3>
@@ -288,8 +351,16 @@
                         </div>
                     </li>
                     <li class="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row">
-                        <img src="assets/images/ccd.png" alt=""
-                            class="aspect-4/5 w-[25rem] flex-none rounded-2xl object-cover outline-1 -outline-offset-1 outline-black/5" />
+                        <div
+                            class="group relative aspect-6/6 sm:w-[20rem] w-20rem flex-none cursor-pointer transition duration-500 hover:scale-110">
+                            <img src="assets/images/ccd.png" alt="CCD - City College of Davao"
+                                class="w-full h-full object-cover  rounded-2xl outline-1 -outline-offset-1 outline-black/5" />
+                            <div
+                                class="absolute inset-0 flex flex-col justify-end bg-black/60 p-6 opacity-0 rounded-2xl group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="text-white text-xl font-semibold">View more</h3>
+                                <p class="text-white text-sm">CCD - City College of Davao.</p>
+                            </div>
+                        </div>
                         <div class="max-w-xl flex-auto">
                             <h3 class="text-lg/8 font-semibold tracking-tight text-gray-900">CCD - City College of Davao
                             </h3>
@@ -332,6 +403,7 @@
 
     <script src="assets/js/infinateScroll.js"></script>
     <script src="assets/js/smoothScroll.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 
 </html>

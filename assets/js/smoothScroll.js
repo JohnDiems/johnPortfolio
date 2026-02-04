@@ -1,4 +1,3 @@
-// Toggle menu function
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
 const line1 = document.getElementById('line1');
