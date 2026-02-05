@@ -1,23 +1,32 @@
-const modal = document.getElementById('modal');
-const openBtn = document.getElementById('openModal');
-const closeBtn = document.getElementById('closeModal');
+const openBtns = document.querySelectorAll('.open-modal');
+const modals = document.querySelectorAll('.modal');
 
-openBtn.addEventListener('click', () => {
-    modal.classList.add('show');
+openBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const modal = btn.nextElementSibling;
+        if (modal && modal.classList.contains('modal')) {
+            modal.classList.add('show');
+        }
+    });
 });
 
-closeBtn.addEventListener('click', () => {
-    modal.classList.remove('show');
+document.querySelectorAll('.close-modal').forEach((closeBtn) => {
+    closeBtn.addEventListener('click', (e) => {
+        const modal = closeBtn.closest('.modal');
+        if (modal) modal.classList.remove('show');
+    });
 });
 
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.classList.remove('show');
-    }
+modals.forEach((modal) => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
 });
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        modal.classList.remove('show');
+        document.querySelectorAll('.modal.show').forEach((m) => m.classList.remove('show'));
     }
 });
